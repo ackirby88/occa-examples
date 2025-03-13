@@ -1,0 +1,14 @@
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/edit_cache.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/rebuild_cache.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/list_install_components.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/install.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/install/local.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/CMakeFiles/install/strip.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/demo.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/demo-f90.mpi.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/edit_cache.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/rebuild_cache.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/list_install_components.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/install.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/install/local.dir
+/media/akirby/SSD3/codes/occa-examples/F90/builds/demo_release/src/CMakeFiles/install/strip.dir

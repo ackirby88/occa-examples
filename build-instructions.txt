@@ -1,0 +1,51 @@
+=======================
+OCCA BUILD INSTRUCTIONS
+=======================
+  # move into occa directory
+  cd occa
+
+  # configure cmake and build
+  CC=mpicc CXX=mpic++ FC=mpif90 ENABLE_DPCPP="OFF" ENABLE_FORTRAN="ON" ./configure-cmake.sh
+
+  # >>> NOTE: you may need to edit configure-cmake.sh to enable/disable DEVICE MODES (or ccmake below)
+    
+  # build and install occa
+  cd build
+  ccmake .           # set any other configurations
+  make -j4 install   # build and install occa
+
+
+==========================
+FORTRAN BUILD INSTRUCTIONS
+==========================
+  # cd to fortran demo
+  cd F90
+
+  # configure and build
+  ./configure.sh
+
+  # execute
+  cd builds/demo_release/bin
+  ./demo-f90.mpi  
+
+  # TO REBUILD (edit src/main.F90 for DEVICE MODES)
+  cd builds/demo_release
+  make clean; make
+
+
+======================
+C++ BUILD INSTRUCTIONS
+======================
+  # cd to c++ demo
+  cd cxx 
+
+  # configure and build
+  ./configure.sh
+
+  # execute
+  cd builds/demo_release/bin
+  ./demo-c++.mpi  
+
+  # TO REBUILD (edit src/main.cxx for DEVICE MODES)
+  cd builds/demo_release
+  make clean; make

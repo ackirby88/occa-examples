@@ -1,0 +1,1 @@
+/usr/bin/gfortran -fPIC -O3 -DNDEBUG -O3 -Wl,--no-as-needed -shared -Wl,-soname,libdemo.so -o ../lib/libdemo.so CMakeFiles/demo.dir/init_mod.F90.o  -Wl,-rpath,/media/akirby/SSD3/codes/occa-examples/occa/install/lib /media/akirby/SSD3/codes/occa-examples/occa/install/lib/libocca.so -lm 
