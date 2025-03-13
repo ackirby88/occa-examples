@@ -1,1 +1,0 @@
-/media/akirby/SSD3/codes/occa-examples/F90/install/demo_release/bin/demo-f90.mpi
