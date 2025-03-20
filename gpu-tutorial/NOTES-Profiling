@@ -1,0 +1,6 @@
+Great tutorial on GPU profiling and optimization, see:
+
+ >> Dominik Ernst -- Erlangen National High Performance Computing Center
+    Introduction to Performance Analysis for NVIDIA GPUs
+    YouTube Lecture: https://youtu.be/27vRMM5JcSg?si=pskeuvWdyoQPMXjc
+    Github Repository: https://github.com/te42kyfo/omp_jacobi

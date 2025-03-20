@@ -1,0 +1,27 @@
+/**
+ * \file    test_struct.okl
+ * \author  akirby
+ *
+ * \brief   Test functions for OCCA.
+ */
+
+/* system header files */
+#include <stdio.h>
+
+/* header files */
+#include "./okl/precision_types.h"
+#include "./okl/solver_okl.h"
+
+/**< NOTE: This example demonstrates how to pass in a struct (which is always passed by address *). */
+@kernel void test_okl_struct(const o_physics_t *physics,
+                             const o_numerics_t *numerics){
+    // All kernels but have an "@inner" and "@outer" loop to compile
+    // Here, we simply make a single thread t
+
+    // o_physics_t and o_numerics_t are struct definitions (see solver_okl.h)
+    for(int t = 0; t < 1; t++; @tile(1,@outer,@inner)){
+        printf("Physics->gamma: %f\n",physics->gamma);
+	printf("Physics->mach0: %f\n",physics->mach0);
+	printf("Numerics->riemann_type:  %d\n",numerics->riemann_type);
+    }
+}

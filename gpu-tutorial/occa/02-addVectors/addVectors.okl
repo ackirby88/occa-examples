@@ -1,0 +1,14 @@
+@kernel void addVectors(const int N,
+			const float *a,
+			const float *b,
+                        float *ab){
+
+  for (int io = 0; io < N; io += TILE_SIZE; @outer(0)) {
+    for (int ii = 0; ii < TILE_SIZE; ++ii; @inner(0)) {
+      int i = io + ii; // Thread ID
+      if(i < N){
+        ab[i] = a[i] + b[i];
+      }
+    }
+  }
+}

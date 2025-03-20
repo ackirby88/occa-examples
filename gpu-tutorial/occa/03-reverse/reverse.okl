@@ -1,0 +1,12 @@
+@kernel void reverse(const int N,
+                     float *d_a){
+  for (int io = 0; io < N/2; io += TILE_SIZE; @outer(0)) {
+    for (int n = io; n < io+TILE_SIZE; ++n; @inner(0)) {
+      if(n < N/2){
+        float an = d_a[n];
+        d_a[n] = d_a[N-1-n];
+        d_a[N-1-n] = an;
+      }
+    }
+  }
+}
