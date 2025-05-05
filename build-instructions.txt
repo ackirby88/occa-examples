@@ -50,7 +50,7 @@ FORTRAN BUILD INSTRUCTIONS
 		terminate called after throwing an instance of 'occa::exception'
 		  what():  
 		---[ Error ]--------------------------------------------------------------------
-		    File     : /home/akirby/codes/occa-examples/occa/src/occa/internal/utils/sys.cpp
+		    File     : /path/to/occa/src/occa/internal/utils/sys.cpp
 		    Line     : 769
 		    Function : operator()
 		    Message  : Could not compile compilerVendorTest.cpp with following command: 
