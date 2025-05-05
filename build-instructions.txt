@@ -6,7 +6,7 @@ OCCA BUILD INSTRUCTIONS
   cd occa
 
   # configure cmake and build
-  CC=mpicc CXX=mpic++ FC=mpif90 OCCA_ENABLE_OPENCL="OFF" OCCA_ENABLE_DPCPP="OFF" OCCA_ENABLE_FORTRAN="ON" ./configure-cmake.sh
+  CC=mpicc CXX=mpicxx FC=mpif90 OCCA_ENABLE_OPENCL="OFF" OCCA_ENABLE_DPCPP="OFF" OCCA_ENABLE_FORTRAN="ON" ./configure-cmake.sh
 
   # >>> NOTE: you may need to edit configure-cmake.sh to enable/disable DEVICE MODES (or ccmake below)
     
