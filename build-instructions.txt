@@ -15,11 +15,16 @@ OCCA BUILD INSTRUCTIONS
   ccmake .           # set any other configurations
   make -j4 install   # build and install occa
 
+  # check if external libraries are linked (e.g., libcuda.so.1)
+  cd bin
+  ldd occa
+  >> (CUDA Example) >> IF: libcuda.so.1 => not found, THEN: make sure the compute environment has a GPU exposed
+    >> SOLUTION on HPC Cluster: start an interactive job with a GPU.
+    >> e.g., UWYO ARCC: "salloc --account=uw-soc --time=40:00 --nodes=1 --ntasks-per-node=1 --gres=gpu:1" 
 
 ======================
 OCCA TUTORIAL EXAMPLES
 ======================
-
 
 
 ==========================
@@ -33,13 +38,34 @@ FORTRAN BUILD INSTRUCTIONS
 
   # execute
   cd builds/demo_release/bin
-  ./demo-f90.mpi  
+  ./demo-f90.mpi
+
+  # RESOLVING A COMMON ISSUE
+  >> IF THE FOLLOWING ERROR ARISES:
+	'''
+		Thread Mode Set: CUDA
+		 Compiling OCCA kernels...
+		 > Building macro: jacobi_inner.okl > Success! ./okl/jacobi_inner.okl.macro
+		   Kernel: norm2
+		terminate called after throwing an instance of 'occa::exception'
+		  what():  
+		---[ Error ]--------------------------------------------------------------------
+		    File     : /home/akirby/codes/occa-examples/occa/src/occa/internal/utils/sys.cpp
+		    Line     : 769
+		    Function : operator()
+		    Message  : Could not compile compilerVendorTest.cpp with following command: 
+				...
+	'''
+     SOLUTION: On the Command-Line Terminal:
+	'''
+		export OCCA_CXX=mpicxx
+	'''
 
   # TO REBUILD (edit src/main.F90 for DEVICE MODES)
   cd builds/demo_release
   make clean; make
 
-
+  
 ======================
 C++ BUILD INSTRUCTIONS
 ======================
