@@ -1,6 +1,19 @@
-=======================
-OCCA BUILD INSTRUCTIONS
-=======================
+==============================================
+1. Launch Interactive GPU Session for Building
+==============================================
+cd scripts
+./interactive-gpu.sh   # starts int. session w/ L40S GPU
+
+===============================
+2. Load Modules on Medicine Bow
+===============================
+[$] module reset
+[$] module load gcc/14.2.0 cuda-toolkit/12.8.0
+
+
+==========================
+3. OCCA Build Instructions
+==========================
   # move into occa directory
   git submodule init && git submodule update
   cd occa
@@ -22,14 +35,13 @@ OCCA BUILD INSTRUCTIONS
     >> SOLUTION on HPC Cluster: start an interactive job with a GPU.
     >> e.g., UWYO ARCC: "salloc --account=uw-soc --time=40:00 --nodes=1 --ntasks-per-node=1 --gres=gpu:1" 
 
-======================
-OCCA TUTORIAL EXAMPLES
-======================
 
-
-==========================
-FORTRAN BUILD INSTRUCTIONS
-==========================
+=========================
+4. OCCA TUTORIAL EXAMPLES
+=========================
+..............................
+4a. FORTRAN BUILD INSTRUCTIONS
+..............................
   # cd to fortran demo
   cd demo-F90
 
@@ -65,10 +77,9 @@ FORTRAN BUILD INSTRUCTIONS
   cd builds/demo_release
   make clean; make
 
-  
-======================
-C++ BUILD INSTRUCTIONS
-======================
+..........................
+4b. C++ BUILD INSTRUCTIONS
+..........................
   # cd to c++ demo
   cd demo-cxx 
 
